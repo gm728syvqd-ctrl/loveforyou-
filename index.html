@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>จดหมายจากใจ ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffd6e8, #fff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background: #fffafc;
+    width: 90%;
+    max-width: 420px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    padding: 25px;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #ff4d88;
+}
+
+.letter {
+    text-align: left;
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    line-height: 1.8;
+    color: #444;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.btn {
+    background: #ff4d88;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+    margin-top: 15px;
+    animation: fadeIn 1s ease;
+}
+
+.confirm button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+.yes {
+    background: #ff4d88;
+    color: white;
+}
+
+.no {
+    background: #ddd;
+    color: #555;
+}
+
+.no:hover {
+    transform: translateX(10px);
+}
+
+#result {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff4d88;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <img src="love1.jpg" alt="รูปของเรา">
+
+    <h1>จดหมายจากใจ ❤️</h1>
+
+    <button class="btn" onclick="openLetter()">
+        เปิดจดหมาย 💌
+    </button>
+
+    <div id="letterBox" class="hidden">
+        <div class="letter">
+            ถึงเธอคนพิเศษของเรา  
+            <br><br>
+            วันนี้เป็นวันสุดท้ายของปี  
+            เราเลยอยากใช้โอกาสนี้บอกความรู้สึกที่เก็บไว้ในใจ  
+            ปีนี้อาจไม่ใช่ปีที่ดีที่สุด  
+            แต่ทุกวันที่มีเธออยู่ มันทำให้เรายิ้มได้เสมอ  
+            <br><br>
+            เราไม่รู้ว่าปีหน้าจะเจออะไรบ้าง  
+            แต่เราอยากมีเธออยู่ข้าง ๆ  
+            อยากดูแล อยากใส่ใจ  
+            และอยากเดินไปข้างหน้าด้วยกัน  
+            <br><br>
+            ถ้าเป็นไปได้  
+            เราอยากขอเริ่มต้นปีใหม่  
+            ด้วยสถานะที่เรียกว่า “แฟน”  
+            <br><br>
+            จากใจ  
+            💗
+        </div>
+
+        <p style="margin-top:15px;"><strong>เธอจะเป็นแฟนกับเราไหม 🥺❤️</strong></p>
+
+        <div class="confirm">
+            <button class="yes" onclick="answerYes()">เป็น ❤️</button>
+            <button class="no" onclick="answerNo()">ไม่เป็น 💔</button>
+        </div>
+
+        <p id="result"></p>
+    </div>
+</div>
+
+<script>
+function openLetter() {
+    document.getElementById("letterBox").style.display = "block";
+}
+
+function answerYes() {
+    document.getElementById("result").innerHTML =
+        "เย้!!! 💗 ขอบคุณที่รับหัวใจของเรา ตั้งแต่วันนี้เป็นแฟนกันแล้วนะ 🥰";
+}
+
+function answerNo() {
+    document.getElementById("result").innerHTML =
+        "ไม่เป็นก็ไม่เป็น 😭 แต่ความรู้สึกเรายังเหมือนเดิมนะ 💔";
+}
+</script>
+
+</body>
+</html>
